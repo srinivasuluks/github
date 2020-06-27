@@ -20,7 +20,8 @@ app.get('/', function (req, res) {
  //send multiple responses to the client
   for (var i=1; i <= 5; i++) 
   {
-		res.send('<h1>This is the response Loop Iteration#: ' + i + '</h1>');		
+		//res.send('<h1>This is the response Loop Iteration#: ' + i + '</h1>');	
+	  console.log('This is the response Loop Iteration#: ', i);
    }
 });
 
