@@ -8,25 +8,20 @@ const HOST = '0.0.0.0';
 
 // App
 const app = express();
-app.get('/', function (req, res) {
-  var i = 0,
-    max = 5;
 
+app.get('/', function (req, res) {
   //set the appropriate HTTP header
   res.setHeader('Content-Type', 'text/html');
+  res.send('<h1>Hello, Welcome to first Srini Jenkinds Docker Apps ! </h1>');
 
-  //send multiple responses to the client
-  for (; i <= max; i++) 
+});
+
+app.get('/', function (req, res) {
+ //send multiple responses to the client
+  for (var i=1; i <= 5; i++) 
   {
-	  if (i<1)
-	  {
-	    res.send('Hello, Welcome to first Srini Jenkinds Docker Apps ! ');
-	  }
-	  else
-	  {
-		res.send('<h1>This is the response Loop Iteration#: ' + i + '</h1>');
-	  }
-  }
+		res.send('<h1>This is the response Loop Iteration#: ' + i + '</h1>');		
+   }
 });
 
 app.listen(PORT, HOST);
