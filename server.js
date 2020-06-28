@@ -12,11 +12,9 @@ const app = express();
 app.get('/', function (req, res) {
   //set the appropriate HTTP header
   res.setHeader('Content-Type', 'text/html');
-  res.send('<h1>Welcome to first Srini Jenkins Docker Apps, GitHub.git !!! </h1>');
+  res.send('<h1>Welcome to first Srini Jenkins Docker Apps, GitHub.git !!!! </h1>');
   
-
 });
-
 
 });
 
