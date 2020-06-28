@@ -12,17 +12,11 @@ const app = express();
 app.get('/', function (req, res) {
   //set the appropriate HTTP header
   res.setHeader('Content-Type', 'text/html');
-  res.send('<h1>Hello, Welcome to first Srini Jenkinds Docker Apps ! </h1>');
+  res.send('<h1>Welcome to first Srini Jenkins Docker Apps, GitHub.git ! </h1>');
 
 });
 
-app.get('/', function (req, res) {
- //send multiple responses to the client
-  for (var i=1; i <= 5; i++) 
-  {
-		//res.send('<h1>This is the response Loop Iteration#: ' + i + '</h1>');	
-	  console.log('This is the response Loop Iteration#: ', i);
-   }
+
 });
 
 app.listen(PORT, HOST);
