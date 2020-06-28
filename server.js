@@ -8,14 +8,25 @@ const HOST = '0.0.0.0';
 
 // App
 const app = express();
-
 app.get('/', function (req, res) {
+  var i = 0,
+    max = 5;
+
   //set the appropriate HTTP header
   res.setHeader('Content-Type', 'text/html');
-  res.send('<h1>Welcome to node-web-app docker container, GitHub.git !!!! </h1>');
-  
-});
 
+  //send multiple responses to the client
+  for (; i <= max; i++) 
+  {
+	  if (i<1)
+	  {
+	    res.send('Hello, welcome to docker/Jenkings !!!!! ');
+	  }
+	  else
+	  {
+		res.send('<h1>This is the response Loop Iteration#: ' + i + '</h1>');
+	  }
+  }
 });
 
 app.listen(PORT, HOST);
